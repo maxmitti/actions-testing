@@ -65,4 +65,3 @@ jobs:
           allowUpdates: true
           artifactErrorsFailBuild: true
           replacesArtifacts: true
-          skipIfReleaseExists: true

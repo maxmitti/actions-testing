@@ -64,4 +64,4 @@ jobs:
           artifacts: output/output-${{ matrix.env }}-${{ matrix.arch }}.tar.gz
           allowUpdates: true
           artifactErrorsFailBuild: true
-          generateReleaseNotes: true
+          replacesArtifacts: true

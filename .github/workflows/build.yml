@@ -59,7 +59,7 @@ jobs:
 
       - name: Release
         uses: ncipollo/release-action@v1.11.2
-        if: ${{ env.RELEASE == 'true' }}
+        if: env.RELEASE
         with:
           artifacts: output/output-${{ matrix.env }}-${{ matrix.arch }}.tar.gz
           allowUpdates: true

@@ -52,14 +52,14 @@ jobs:
             output/*
 
       - name: Pack
-        if: ${{ env.RELEASE }}
+        if: ${{ env.RELEASE == true }}
         run: |
           cd output
           tar -czf output-${{ matrix.env }}-${{ matrix.arch }}.tar.gz *
 
       - name: Release
         uses: ncipollo/release-action@v1.11.2
-        if: ${{ env.RELEASE }}
+        if: ${{ env.RELEASE == true }}
         with:
           artivacts: output/output-${{ matrix.env }}-${{ matrix.arch }}.tar.gz
           allowUpdates: true
